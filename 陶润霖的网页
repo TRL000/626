@@ -1,47 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>trl</title>
-    <style>  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>陶润霖</title>
+    <meta
+      name="description"
+      content="陶润霖的个人网站。"
+    />
+    <meta
+      name="keywords"
+      content="周子益在网课中当上了主持人"
+    />
+    
+      name="og:description"
+  
       body {
         margin: 0;
+        font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
+          "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+      }
+
+      p {
+        margin-bottom: 16px;
+        overflow-wrap: break-word;
+      }
+
+      a {
+        color: #216cd3;
+        text-decoration: none;
+        border-bottom: 1px dashed;
+      }
+
+      hr {
+        margin: 30px auto;
       }
     </style>
   </head>
+
   <body>
-    <div style="
-      background-color: #00ffff;
-      text-align: center;
-      padding: 40px;
-    ">
-      <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.JmD52xDNGdHG_7mpQSz77AHaEo?w=297&h=185&c=7&r=0&o=5&pid=1.7" alt="陶润霖" width="80px" height="80px"
-    </div> 
-    <div style="
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 15px;
-      line-height: 1.7;
-      color: red;
-    "> 
-      <p>陶润霖的第一个的网站</p>
-    
-      <p>个人信息：QQ：3158779113【非诚勿扰】</p>
-      <p>手机号码：没有手机哪来的手机号码....</p>
-      <p>zz</p>
-      <p>yy</p>
-      <p>HH</p>
-      <p>vv</p>
+    <div style="background-color: #f1f1f1; text-align: center; padding: 40px">
+      <img alt="康文昌" src="./logo.png" width="80px" height="80px" />
+      <!-- <h1>陶润霖的个人网站</h1> -->
     </div>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 40px;
-      font-size: 12px;
-   ">
-      <p>我的网站</p>
-      <a href="https://github.com/TRL000/-12310123.git">友情链接</a>
-   </div>
+    <article
+      style="
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 15px;
+        color: rgb(36, 41, 46);
+        font-size: 17px;
+        line-height: 1.7;
+        text-size-adjust: 100%;
+
+        >。
+      </p>
+      <p>
+       
+      </p>
+      <p>
+       
+      </p>
+      <p></p>
+      <p></p>
+      <hr />
+      <p>
+        
+      </p>
+
+      <p></p>
+      <p>
+       
+      </p>
+   
+      <p>
+        
+      </p>
+      <hr />
+      <p>
+        
+      </p>
+      <p></p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      
+      <p>
+       
+      </p>
+      <img
+        
+      />
+      <p>
+       
+      </p>
+      <>
+      </p>
+    </article>
+    <footer
+      style="
+        margin-top: 60px;
+        background-color: #f1f1f1;
+        text-align: center;
+      
+        style="color: #666"
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >沪ICP备66666666666666号-2
+      </a>
+    </footer>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
   </body>
 </html>
