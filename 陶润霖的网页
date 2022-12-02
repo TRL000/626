@@ -1,128 +1,162 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>陶润霖</title>
-    <meta
-      name="description"
-      content="陶润霖的个人网站。"
-    />
-    <meta
-      name="keywords"
-      content="周子益在网课中当上了主持人"
-    />
-    
-      name="og:description"
-  
-      body {
-        margin: 0;
-        font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
-          "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
-      }
+<!-- saved from url=(0073)http://www.painterengine.com/main/instances/instance2021081801/index.html -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-      p {
-        margin-bottom: 16px;
-        overflow-wrap: break-word;
-      }
 
-      a {
-        color: #216cd3;
-        text-decoration: none;
-        border-bottom: 1px dashed;
-      }
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
 
-      hr {
-        margin: 30px auto;
-      }
-    </style>
-  </head>
+			.container {
+				display: flex;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				justify-content: center;
+				align-items: center;
+			}
 
-  <body>
-    <div style="background-color: #f1f1f1; text-align: center; padding: 40px">
-      <img alt="康文昌" src="./logo.png" width="80px" height="80px" />
-      <!-- <h1>陶润霖的个人网站</h1> -->
-    </div>
-    <article
-      style="
-        max-width: 700px;
-        margin: 30px auto;
-        padding: 15px;
-        color: rgb(36, 41, 46);
-        font-size: 17px;
-        line-height: 1.7;
-        text-size-adjust: 100%;
+			.progressContainer{
+				width: 70vw;
+				height: 1.3em;
+				border: 1px solid #000;
+				padding: 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<canvas id="canvas" style="display: none;" oncontextmenu="event.preventDefault()" width="960"
+				height="480"></canvas>
+			<div id="progressBar">
+				<p>loading ...</p>
+				<div class="progressContainer">
+					<div id="loaded" style="transition-duration: 0.2s;background-color: #000000;height: 100%;min-width: 2em;width: 0%; color: #fff;text-align: center;">
+						0%
+					</div>
+				</div>
+			</div>
+			
+			<script type="text/javascript">
+				var Module = {
+					canvas: (function() {
+						return document.getElementById('canvas');
+					})()
+				};
+				
+				var event = new CustomEvent('progress');
+				
+				function lookProgress() {
+					var total = 0;
+					var loaded = 0;
+					if (Module.dataFileDownloads) {
+				
+						for (var key in Module.dataFileDownloads) {
+							total += Module.dataFileDownloads[key].total;
+							loaded += Module.dataFileDownloads[key].loaded;
+						}
+						if (total != 0) {
+							current = Math.round(loaded * 100 / total);
+							if (current !== event.precent) {
+								event.precent = current;
+								dispatchEvent(event);
+							}
+							if (current === 100)
+								return;
+				
+						}
+					}
+					setTimeout(lookProgress, 100);
+				}
+				lookProgress();
+				
+				
+				var progress = document.getElementById('loaded');
+				var progressBar = document.getElementById('progressBar');
+				addEventListener("progress",function(e){
+					progress.style.width =  e.precent + '%';
+					progress.innerHTML = e.precent + '%';
+					if(e.precent === 100){
+						Module.canvas.style.display = 'block';
+						progressBar.style.display = 'none';
+					}
+				});
+				
+			</script>
+			<script src="PainterEngine.js"></script>
+			
+		</div>
+		<remove-web-limits-iqxin id="rwl-iqxin" class="rwl-exempt" style="position: fixed; top: 212px; left: 0px;">
+			<qxinbutton type="qxinbutton" id="rwl-setbtn"> set </qxinbutton>
+			<lalala style="cursor:move; font-size:12px;">限制解除</lalala> <input type="checkbox" name="" id="black_node">
+			<style type="text/css">
+				#rwl-iqxin {
+					position: fixed;
+					transform: translate(-95px, 0);
+					width: 85px;
+					height: 25px;
+					font-size: 12px;
+					font-weight: 500;
+					font-family: Verdana, Arial, '宋体';
+					color: #fff;
+					background: #333;
+					z-index: 2147483647;
+					margin: 0;
+					opacity: 0.05;
+					transition: 0.3s;
+					overflow: hidden;
+					user-select: none;
+					text-align: center;
+					white-space: nowrap;
+					line-height: 25px;
+					padding: 0 16px;
+					border: 1px solid #ccc;
+					border-width: 1px 1px 1px 0;
+					border-bottom-right-radius: 5px;
+					box-sizing: content-box;
+				}
 
-        >。
-      </p>
-      <p>
-       
-      </p>
-      <p>
-       
-      </p>
-      <p></p>
-      <p></p>
-      <hr />
-      <p>
-        
-      </p>
+				#rwl-iqxin input {
+					margin: 0;
+					padding: 0;
+					vertical-align: middle;
+					-webkit-appearance: checkbox;
+					-moz-appearance: checkbox;
+					position: static;
+					clip: auto;
+					opacity: 1;
+					cursor: pointer;
+				}
 
-      <p></p>
-      <p>
-       
-      </p>
-   
-      <p>
-        
-      </p>
-      <hr />
-      <p>
-        
-      </p>
-      <p></p>
-      <p>
-        
-      </p>
-      <p>
-        
-      </p>
-      
-      <p>
-       
-      </p>
-      <img
-        
-      />
-      <p>
-       
-      </p>
-      <>
-      </p>
-    </article>
-    <footer
-      style="
-        margin-top: 60px;
-        background-color: #f1f1f1;
-        text-align: center;
-      
-        style="color: #666"
-        href="https://beian.miit.gov.cn/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >沪ICP备66666666666666号-2
-      </a>
-    </footer>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("sw.js");
-        });
-      }
-    </script>
-  </body>
+				#rwl-iqxin.rwl-active-iqxin {
+					left: 0px;
+					transform: translate(0, 0);
+					opacity: 0.9;
+					height: 32px;
+					line-height: 32px
+				}
+
+				#rwl-iqxin label {
+					margin: 0;
+					padding: 0;
+					font-weight: 500;
+				}
+
+				#rwl-iqxin #rwl-setbtn {
+					margin: 0 4px 0 0;
+					padding: 0 0 0 4px;
+					border: none;
+					border-radius: 2px;
+					cursor: pointer;
+					background: #fff;
+					color: #000;
+				}
+			</style>
+		</remove-web-limits-iqxin>
+
+
+	</body>
 </html>
